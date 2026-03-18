@@ -45,7 +45,16 @@ namespace VinculoComUC5
                 //Extrair texto e coloca dentro do vetor linhas
                 string[] linhas = textoLido.ToString().Split('\n');
                 //for (int i = 0; i < linhas.lenght;i++) lboDados.Items.Add(linhas[i])
-                foreach (string linha in linhas) lboDados.Items.Add(linha);
+                //foreach (string linha in linhas) lboDados.Items.Add(linha);
+                for (int i = 0; i<linhas.Length; i = i + 4)
+                {
+                    string nome = linhas[i]; //Vem do arquivo dadosdogoverno.txt
+                    char sexo = linhas[i+1].ToString()[0];
+                    string escolaridade = linhas[i+2];
+                    string classe = linhas[i+3];
+                    Pessoa novaPessoa = new Pessoa(nome,sexo, escolaridade, classe);
+                    lboDados.Items.Add(novaPessoa);
+                }
 
             }
             // Caso aconteça qualquer erro no try, vou pegar esse erro
