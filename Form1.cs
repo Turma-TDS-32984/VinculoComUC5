@@ -16,6 +16,7 @@ namespace VinculoComUC5
         private OpenFileDialog leitura = new OpenFileDialog();
         private SaveFileDialog salvamento = new SaveFileDialog();
         private string caminho;
+        protected Pessoa pessoa = null;
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace VinculoComUC5
         /// <param name="e">O envento de click</param>
         private void btnObterDados_Click(object sender, EventArgs e)
         {
-            //Vamos voltar nessa linha - 1
+            leitura.Filter = "|*.txt";
             leitura.Title = "Selecione o arquivo que contem os dados";
             //Verificar se deu tudo certo ao clicar em OK, após selecionar o dado
             //Se ao obter o caminho o caminho deu certo, continua, caso contrario encerra
@@ -54,6 +55,7 @@ namespace VinculoComUC5
                     string classe = linhas[i+3];
                     Pessoa novaPessoa = new Pessoa(nome,sexo, escolaridade, classe);
                     lboDados.Items.Add(novaPessoa);
+                    
                 }
 
             }
@@ -63,6 +65,28 @@ namespace VinculoComUC5
                 //Qualquer erro que aparecer, vou visualizar
                 MessageBox.Show(erro.Message);
             }
+        }
+
+        private void lboDados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Pessoa antigaPessoa = (sender as ListBox).SelectedItem as Pessoa;
+            if (antigaPessoa == null) return;
+            Pessoa novaPessoa;
+            using (Cadastro cadastro = new Cadastro(antigaPessoa))
+            {
+                cadastro.ShowDialog();
+                novaPessoa = cadastro.pessoa;
+            }
+            lboDados.ClearSelected();
+            for (int i = 0; i < lboDados.Items.Count; i++)
+            {
+                if (lboDados.Items[i] == antigaPessoa)
+                {
+                    lboDados.Items[i] = novaPessoa;
+                    break;
+                }
+            }
+            lboDados.Update();
         }
     }
 }
