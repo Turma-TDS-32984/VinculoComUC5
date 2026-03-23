@@ -17,9 +17,13 @@ namespace VinculoComUC5
         private char _sexo;
         private string _escolaridade;
         private string _classe;
+        /// <summary>
+        /// Vou deixar publico, apenas para leitura do nome da pessoa
+        /// </summary>
         public string nome 
         {
             get { return _nome; }
+            //set { _nome = value; }
         }
         public char sexo
         {

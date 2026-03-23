@@ -12,22 +12,50 @@ namespace VinculoComUC5
 {
     public partial class Cadastro : Form
     {
+        /// <summary>
+        /// Criação do Objeto como um elemento do código
+        /// </summary>
         private Pessoa __pessoa;
-        public Cadastro(Pessoa pessoa)
+        /// <summary>
+        /// Construtor para Inserção dos dados
+        /// </summary>
+        public Cadastro()
         {
             InitializeComponent();
+            btnExcluir.Enabled = false;
+            btnAtualizar.Text = "Inserir";
+        }
+        /// <summary>
+        /// Construindo o formulário, precisa ter no inicio a pessoa a ser edita
+        /// </summary>
+        /// <param name="pessoa">Passa a pessoa antiga para a atualização</param>
+        public Cadastro(Pessoa pessoa)
+        {
+            //Inicia todos os controles (textBox, ListBox, comboBox, ...) do formulário
+            InitializeComponent();
+            //Vou passar a pessoa antiga para atualização
             __pessoa = pessoa;
+            //Vou preencher todos os controles (textBox, comboBox,...)
             txtNome.Text = pessoa.nome;
             txtEscolaridade.Text = pessoa.escolaridade;
             rdoFeminino.Checked = pessoa.sexo is 'F';
             rdoMasculino.Checked = pessoa.sexo is 'M';
             cboClasse.SelectedItem = pessoa.classe.Substring(0,8);
         }
+        /// <summary>
+        /// Habilitar a leitura da pessoa
+        /// </summary>
         public Pessoa pessoa {  
             get { return __pessoa; } 
         }
+        /// <summary>
+        /// Função do clique que permite a pessoa ter seus dados atualizados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            //Modifica os dados, com base nos controles (textBox, comboBox,...)
             string nome = txtNome.Text;
             char sexo = rdoFeminino.Checked ? 'F' : 'M';
             //char sexo;
@@ -35,8 +63,23 @@ namespace VinculoComUC5
             //if (rdoMasculino.Checked) sexo = 'M';
             string escolaridade = txtEscolaridade.Text;
             string classe = cboClasse.SelectedItem as string;
-            __pessoa.atualizarCampos(nome, escolaridade, sexo, classe);
+            // Vou deixar vocês comentarem
+            if (__pessoa == null)
+                __pessoa = new Pessoa(nome,sexo,escolaridade,classe);
+            else
+                __pessoa.atualizarCampos(nome, escolaridade, sexo, classe);
             
+            Close();
+        }
+        /// <summary>
+        /// Informo que a pessoa será nula (vazio) para no outro código
+        /// excluir da lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            __pessoa = null;
             Close();
         }
     }

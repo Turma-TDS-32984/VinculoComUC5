@@ -43,19 +43,21 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(173, 168);
+            this.btnExcluir.Location = new System.Drawing.Point(195, 210);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(157, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(177, 29);
             this.btnExcluir.TabIndex = 1;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblSexo
             // 
             this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(231, 9);
+            this.lblSexo.Location = new System.Drawing.Point(260, 11);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(109, 16);
+            this.lblSexo.Size = new System.Drawing.Size(127, 20);
             this.lblSexo.TabIndex = 6;
             this.lblSexo.Text = "Sexo da pessoa:";
             // 
@@ -67,58 +69,62 @@
             "Classe B",
             "Classe C",
             "Classe D"});
-            this.cboClasse.Location = new System.Drawing.Point(24, 120);
+            this.cboClasse.Location = new System.Drawing.Point(27, 150);
+            this.cboClasse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboClasse.Name = "cboClasse";
-            this.cboClasse.Size = new System.Drawing.Size(306, 24);
+            this.cboClasse.Size = new System.Drawing.Size(344, 28);
             this.cboClasse.TabIndex = 7;
             // 
             // lblClasse
             // 
             this.lblClasse.AutoSize = true;
-            this.lblClasse.Location = new System.Drawing.Point(21, 101);
+            this.lblClasse.Location = new System.Drawing.Point(24, 126);
             this.lblClasse.Name = "lblClasse";
-            this.lblClasse.Size = new System.Drawing.Size(120, 16);
+            this.lblClasse.Size = new System.Drawing.Size(139, 20);
             this.lblClasse.TabIndex = 8;
             this.lblClasse.Text = "Classe da pessoa:";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(24, 28);
+            this.txtNome.Location = new System.Drawing.Point(27, 35);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(204, 22);
+            this.txtNome.Size = new System.Drawing.Size(229, 26);
             this.txtNome.TabIndex = 9;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(21, 9);
+            this.lblNome.Location = new System.Drawing.Point(24, 11);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(115, 16);
+            this.lblNome.Size = new System.Drawing.Size(133, 20);
             this.lblNome.TabIndex = 10;
             this.lblNome.Text = "Nome da pessoa:";
             // 
             // lblEscolaridade
             // 
             this.lblEscolaridade.AutoSize = true;
-            this.lblEscolaridade.Location = new System.Drawing.Point(21, 53);
+            this.lblEscolaridade.Location = new System.Drawing.Point(24, 66);
             this.lblEscolaridade.Name = "lblEscolaridade";
-            this.lblEscolaridade.Size = new System.Drawing.Size(159, 16);
+            this.lblEscolaridade.Size = new System.Drawing.Size(183, 20);
             this.lblEscolaridade.TabIndex = 12;
             this.lblEscolaridade.Text = "Escolaridade da pessoa:";
             // 
             // txtEscolaridade
             // 
-            this.txtEscolaridade.Location = new System.Drawing.Point(24, 72);
+            this.txtEscolaridade.Location = new System.Drawing.Point(27, 90);
+            this.txtEscolaridade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEscolaridade.Name = "txtEscolaridade";
-            this.txtEscolaridade.Size = new System.Drawing.Size(204, 22);
+            this.txtEscolaridade.Size = new System.Drawing.Size(229, 26);
             this.txtEscolaridade.TabIndex = 11;
             // 
             // rdoFeminino
             // 
             this.rdoFeminino.AutoSize = true;
-            this.rdoFeminino.Location = new System.Drawing.Point(234, 30);
+            this.rdoFeminino.Location = new System.Drawing.Point(263, 38);
+            this.rdoFeminino.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoFeminino.Name = "rdoFeminino";
-            this.rdoFeminino.Size = new System.Drawing.Size(83, 20);
+            this.rdoFeminino.Size = new System.Drawing.Size(95, 24);
             this.rdoFeminino.TabIndex = 13;
             this.rdoFeminino.TabStop = true;
             this.rdoFeminino.Text = "Feminino";
@@ -127,9 +133,10 @@
             // rdoMasculino
             // 
             this.rdoMasculino.AutoSize = true;
-            this.rdoMasculino.Location = new System.Drawing.Point(234, 72);
+            this.rdoMasculino.Location = new System.Drawing.Point(263, 90);
+            this.rdoMasculino.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoMasculino.Name = "rdoMasculino";
-            this.rdoMasculino.Size = new System.Drawing.Size(89, 20);
+            this.rdoMasculino.Size = new System.Drawing.Size(101, 24);
             this.rdoMasculino.TabIndex = 14;
             this.rdoMasculino.TabStop = true;
             this.rdoMasculino.Text = "Masculino";
@@ -137,9 +144,10 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(12, 168);
+            this.btnAtualizar.Location = new System.Drawing.Point(14, 210);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(155, 23);
+            this.btnAtualizar.Size = new System.Drawing.Size(174, 29);
             this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -147,9 +155,9 @@
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 213);
+            this.ClientSize = new System.Drawing.Size(384, 266);
             this.Controls.Add(this.rdoMasculino);
             this.Controls.Add(this.rdoFeminino);
             this.Controls.Add(this.lblEscolaridade);
@@ -161,6 +169,7 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
             this.ResumeLayout(false);
