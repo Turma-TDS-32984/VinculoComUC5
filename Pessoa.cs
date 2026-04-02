@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VinculoComUC5
+﻿namespace VinculoComUC5
 { 
     /// <summary>
     /// Representa as pessoas da base de dados dadosdogoverno.txt

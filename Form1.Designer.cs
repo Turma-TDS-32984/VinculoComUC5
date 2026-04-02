@@ -31,9 +31,6 @@
             this.lboDados = new System.Windows.Forms.ListBox();
             this.btnObterDados = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
-            this.lblClasseA = new System.Windows.Forms.Label();
-            this.lblClasseB = new System.Windows.Forms.Label();
-            this.lblClasseC = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSalvarComo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -70,33 +67,6 @@
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // lblClasseA
-            // 
-            this.lblClasseA.AutoSize = true;
-            this.lblClasseA.Location = new System.Drawing.Point(228, 19);
-            this.lblClasseA.Name = "lblClasseA";
-            this.lblClasseA.Size = new System.Drawing.Size(83, 20);
-            this.lblClasseA.TabIndex = 3;
-            this.lblClasseA.Text = "lblClasseA";
-            // 
-            // lblClasseB
-            // 
-            this.lblClasseB.AutoSize = true;
-            this.lblClasseB.Location = new System.Drawing.Point(228, 49);
-            this.lblClasseB.Name = "lblClasseB";
-            this.lblClasseB.Size = new System.Drawing.Size(83, 20);
-            this.lblClasseB.TabIndex = 4;
-            this.lblClasseB.Text = "lblClasseB";
-            // 
-            // lblClasseC
-            // 
-            this.lblClasseC.AutoSize = true;
-            this.lblClasseC.Location = new System.Drawing.Point(228, 79);
-            this.lblClasseC.Name = "lblClasseC";
-            this.lblClasseC.Size = new System.Drawing.Size(83, 20);
-            this.lblClasseC.TabIndex = 5;
-            this.lblClasseC.Text = "lblClasseC";
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(205, 121);
@@ -124,9 +94,6 @@
             this.ClientSize = new System.Drawing.Size(409, 269);
             this.Controls.Add(this.btnSalvarComo);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.lblClasseC);
-            this.Controls.Add(this.lblClasseB);
-            this.Controls.Add(this.lblClasseA);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnObterDados);
             this.Controls.Add(this.lboDados);
@@ -134,7 +101,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -143,9 +109,6 @@
         private System.Windows.Forms.ListBox lboDados;
         private System.Windows.Forms.Button btnObterDados;
         private System.Windows.Forms.Button btnInserir;
-        private System.Windows.Forms.Label lblClasseA;
-        private System.Windows.Forms.Label lblClasseB;
-        private System.Windows.Forms.Label lblClasseC;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSalvarComo;
     }
